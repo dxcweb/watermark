@@ -8,7 +8,7 @@
 [新闻：身份证复印件被盗用所造成的损失，你想象不到！](https://www.weixin765.com/doc/reeodiqf.html)
 
 
-## Development
+## 开发
 
 ```
 npm install
