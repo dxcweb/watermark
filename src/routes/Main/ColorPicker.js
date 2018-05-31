@@ -1,6 +1,6 @@
 import React from "react";
 import Block from "dxc-flex";
-import { BlockPicker, AlphaPicker } from "react-color";
+import { BlockPicker } from "react-color";
 
 export default class ColorPicker extends React.Component {
   state = { displayColorPicker: true };

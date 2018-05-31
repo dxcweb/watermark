@@ -21,8 +21,13 @@ export default class IndexPage extends React.Component {
         <Block style={{ margin: "10px" }} horizontal="center">
           在各种证件上添加“仅用于办理XXXX，他用无效。”，防止证件他人被盗！
         </Block>
-        <Block  horizontal="center">
-          <a style={{ color: "#1b9af7" }} href="https://www.weixin765.com/doc/reeodiqf.html">
+        <Block horizontal="center">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#1b9af7" }}
+            href="https://www.weixin765.com/doc/reeodiqf.html"
+          >
             新闻：身份证复印件被盗用所造成的损失，你想象不到！
           </a>
         </Block>
