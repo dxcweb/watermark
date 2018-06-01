@@ -8,7 +8,6 @@ import ColorPicker from "./ColorPicker";
 import Alpha from "./Alpha";
 import example from "./example.jpg";
 import styles from "./Main.css";
-console.log(123, styles);
 
 export default class Main extends React.Component {
   state = {
