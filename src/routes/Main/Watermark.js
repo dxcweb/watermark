@@ -45,6 +45,9 @@ function Watermark(canvas, opt = {}) {
     if (options.watermarkWidth < 100) {
       options.watermarkWidth = 100;
     }
+    if (options.watermarkHeight < 100) {
+      options.watermarkHeight = 100;
+    }
     return options;
   };
   const createWatermarkCanvas = () => {
@@ -113,6 +116,7 @@ function Watermark(canvas, opt = {}) {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   };
   this.draw = dataURL => {
+    step = 0;
     img = new Image();
     img.onload = () => {
       img_width = img.width;

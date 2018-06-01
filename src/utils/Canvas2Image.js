@@ -38,7 +38,10 @@ var Canvas2Image = (function() {
   }
 
   function saveFile(strData) {
-    document.location.href = strData;
+    var aLink = document.createElement("a");
+    aLink.download = "watermark.jpg";
+    aLink.href = strData;
+    aLink.click();
   }
 
   function genImage(strData) {
@@ -246,7 +249,8 @@ var Canvas2Image = (function() {
         saveFile(makeURI(strData, downloadMime));
       } else {
         var strData = getDataURL(canvas, type, width, height);
-        saveFile(strData.replace(type, downloadMime));
+        // saveFile(strData.replace(type, downloadMime));
+        saveFile(strData);
       }
     }
   };

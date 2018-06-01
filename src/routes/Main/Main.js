@@ -3,7 +3,7 @@ import Upload, { filesToDataURL } from "dxc-upload";
 import Watermark from "./Watermark";
 import Block from "dxc-flex";
 import Button from "./Button";
-import { Input } from "dxc-input";
+import { Input, normalize } from "dxc-input";
 import ColorPicker from "./ColorPicker";
 import Alpha from "./Alpha";
 import example from "./example.jpg";
@@ -20,7 +20,7 @@ export default class Main extends React.Component {
   };
   componentDidMount() {
     this.watermark = new Watermark(this.mainCanvas);
-    this.setOptions()
+    this.setOptions();
     this.watermark.draw(example);
   }
   onChangeFile = files => {
@@ -61,7 +61,7 @@ export default class Main extends React.Component {
     const { isExist, text, hex, rgb, fontSize, watermarkHeight, watermarkWidth } = this.state;
     const labelWidth = 60;
     return (
-      <Block style={{ marginTop: 30, padding: "0 30px" }}>
+      <Block style={{ padding: "0 30px" }}>
         <div style={{ width: 400 }}>
           <Block>
             <Upload onChange={this.onChangeFile}>
@@ -83,6 +83,7 @@ export default class Main extends React.Component {
           <Alpha labelWidth={labelWidth} color={rgb} onChange={this.onChangeAlpha} />
           <Block style={{ marginTop: 15 }}>
             <Input
+              normalize={normalize.number}
               width={120}
               labelWidth={labelWidth}
               maxLength={2}
@@ -91,6 +92,7 @@ export default class Main extends React.Component {
               label="字体大小:"
             />
             <Input
+              normalize={normalize.number}
               style={{ marginLeft: 10 }}
               width={130}
               labelWidth={labelWidth}
@@ -100,6 +102,7 @@ export default class Main extends React.Component {
               label="水印框宽:"
             />
             <Input
+              normalize={normalize.number}
               width={130}
               style={{ marginLeft: 10 }}
               labelWidth={labelWidth}

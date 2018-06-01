@@ -3012,9 +3012,16 @@ dxc-input@^0.1.5:
     antd-mobile "^2.1.5"
     dxc-flex "^1.0.1"
 
-dxc-upload@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/dxc-upload/-/dxc-upload-1.0.1.tgz#9d959bbc914c3193452572099be3df8c04181844"
+dxc-input@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/dxc-input/-/dxc-input-0.1.6.tgz#46e7fa0052cba9d8c33e7012a3d539e785b3d65f"
+  dependencies:
+    antd-mobile "^2.1.5"
+    dxc-flex "^1.0.1"
+
+dxc-upload@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/dxc-upload/-/dxc-upload-1.0.3.tgz#8deb82e97812536553c8e7db1ddf2e8d5b0ddd31"
   dependencies:
     bluebird "^3.5.0"
 
@@ -7051,6 +7058,10 @@ punycode@^2.1.0:
 q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
+
+qq-share@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/qq-share/-/qq-share-1.0.0.tgz#9559985ae4ccda33129b34ee471b3dc4795d3565"
 
 qs@6.5.1:
   version "6.5.1"

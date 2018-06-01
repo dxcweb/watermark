@@ -9,9 +9,10 @@
   "dependencies": {
     "dva": "^2.1.0",
     "dxc-flex": "^1.0.3",
-    "dxc-input": "^0.1.5",
-    "dxc-upload": "^1.0.1",
+    "dxc-input": "^0.1.6",
+    "dxc-upload": "^1.0.3",
     "fs-alert": "^0.3.0",
+    "qq-share": "^1.0.0",
     "react": "^16.2.0",
     "react-color": "^2.14.1",
     "react-dom": "^16.2.0"
