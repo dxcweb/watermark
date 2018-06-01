@@ -1,11 +1,14 @@
 import React from "react";
 import Block from "dxc-flex";
+import styles from "./DonationItem.css";
 
-export default class Donation extends React.Component {
+export default class DonationItem extends React.Component {
   render() {
     const { name, qr } = this.props;
     return (
-      <div style={{ border: "1px solid #dfe2e5", width: 188, margin: "0 18px" }}>
+      <div
+        className={styles.box}
+      >
         <Block
           vertical="center"
           horizontal="center"

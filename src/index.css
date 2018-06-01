@@ -1,6 +1,6 @@
 html,
 body,
-#root {
+:global(#root) {
   height: 100%;
   /* font-family: Helvetica Neue For Number, -apple-system, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB,
     Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif; */
@@ -9,6 +9,7 @@ body,
   color: #333;
   font-size: 14px;
 }
+
 body {
   background-color: #fff !important;
 }

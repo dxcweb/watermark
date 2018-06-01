@@ -1,0 +1,13 @@
+.canvas_box {
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .canvas_box {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .main_box {
+    flex-flow: column;
+  }
+}

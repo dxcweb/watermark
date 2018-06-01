@@ -7,6 +7,8 @@ import { Input, normalize } from "dxc-input";
 import ColorPicker from "./ColorPicker";
 import Alpha from "./Alpha";
 import example from "./example.jpg";
+import styles from "./Main.css";
+console.log(123, styles);
 
 export default class Main extends React.Component {
   state = {
@@ -57,12 +59,12 @@ export default class Main extends React.Component {
       this.setOptions();
     });
   };
-  render() {
+  renderControl = () => {
     const { isExist, text, hex, rgb, fontSize, watermarkHeight, watermarkWidth } = this.state;
-    const labelWidth = 60;
+    const labelWidth = 62;
     return (
-      <Block style={{ padding: "0 30px" }}>
-        <div style={{ width: 400 }}>
+      <Block horizontal="center">
+        <div style={{ width: 345 }}>
           <Block>
             <Upload onChange={this.onChangeFile}>
               <Button>选择文件</Button>
@@ -84,7 +86,7 @@ export default class Main extends React.Component {
           <Block style={{ marginTop: 15 }}>
             <Input
               normalize={normalize.number}
-              width={120}
+              width={110}
               labelWidth={labelWidth}
               maxLength={2}
               value={fontSize}
@@ -93,20 +95,20 @@ export default class Main extends React.Component {
             />
             <Input
               normalize={normalize.number}
-              style={{ marginLeft: 10 }}
-              width={130}
+              style={{ marginLeft: 5 }}
+              width={117}
               labelWidth={labelWidth}
-              maxLength={4}
+              maxLength={3}
               value={watermarkWidth}
               onChange={this.onChangeText.bind(this, "watermarkWidth")}
               label="水印框宽:"
             />
             <Input
               normalize={normalize.number}
-              width={130}
-              style={{ marginLeft: 10 }}
+              width={117}
+              style={{ marginLeft: 5 }}
               labelWidth={labelWidth}
-              maxLength={4}
+              maxLength={3}
               value={watermarkHeight}
               onChange={this.onChangeText.bind(this, "watermarkHeight")}
               label="水印框高:"
@@ -114,7 +116,14 @@ export default class Main extends React.Component {
           </Block>
           <div id="test" />
         </div>
-        <div style={{ flex: 1, marginLeft: 30 }}>
+      </Block>
+    );
+  };
+  render() {
+    return (
+      <Block className={styles.main_box} style={{ marginTop: 30 }}>
+        {this.renderControl()}
+        <div className={styles.canvas_box} style={{ flex: 1, minWidth: 345 }}>
           <canvas style={{ width: "100%" }} ref={mainCanvas => (this.mainCanvas = mainCanvas)} />
         </div>
       </Block>

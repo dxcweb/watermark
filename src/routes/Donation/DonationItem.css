@@ -1,0 +1,11 @@
+.box {
+  border: 1px solid #dfe2e5;
+  width: 188px;
+  margin: 0 28px;
+}
+@media (max-width: 768px) {
+  .box {
+    width: 168px;
+    margin: 0 8px;
+  }
+}
